@@ -1,8 +1,8 @@
 cask "volume-cartographer" do
-  version "2.24-rc1"
-  sha256 "23b73a6c770321ec413b13d33818e339b8bfb9b7b20fd447cd9317e83f9f5b1a"
+  version "2.24-rc2"
+  sha256 "c950e18907a51d01ebe86d6c5aadff243f54e6cad7cd86d191dcb8648654c01e"
 
-  url "https://github.com/educelab/volume-cartographer/releases/download/v#{version}/VC-#{version}-Darwin-arm64.zip"
+  url "https://github.com/educelab/volume-cartographer/releases/download/v#{version}/VC-#{version}-Darwin-arm64.dmg"
   name "Volume Cartographer"
   desc "Virtual unwrapping toolkit"
   homepage "https://github.com/educelab/volume-cartographer"
@@ -30,5 +30,4 @@ cask "volume-cartographer" do
   binary "bin/vc_render"
   binary "bin/vc_segment"
   binary "bin/vc_visualize_graph"
-  binary "bin/vc_volume_server"
 end
