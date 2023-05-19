@@ -2,9 +2,9 @@ cask "volume-cartographer" do
   arch arm:   "arm64",
        intel: "x86_64"
 
-  version "2.25.0-rc.1"
-  sha256 arm:   "bb034d611a416db8c942edadc2e0b0e6afd5739b5847d82bb1479f631f751532",
-         intel: "4d59c8ec615fe67f0ddc89c573ace421e514d158b6febc6b5d7118269140740a"
+  version "2.25.0-rc.2"
+  sha256 arm:   "b6e74db794d835b7a71cd1643d9a37654bccdbd524e31b9be2b333990f8b0db2",
+         intel: "84bebc350acef9277131bfe097f53ae050770ed43ea6451a9e097cc01d1e8a9d"
 
   url "https://github.com/educelab/volume-cartographer/releases/download/v#{version}/VC-#{version}-Darwin-#{arch}.zip"
   name "Volume Cartographer"
@@ -36,6 +36,7 @@ cask "volume-cartographer" do
   binary "bin/vc_segment"
   binary "bin/vc_visualize_graph"
   binary "bin/vc_visualize_ppm"
+  binary "bin/vc_repair_pointsets"
 
   zap trash: [
     "~/Library/Preferences/com.educelab.VC.plist",
