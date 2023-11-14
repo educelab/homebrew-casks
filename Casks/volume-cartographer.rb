@@ -2,9 +2,9 @@ cask "volume-cartographer" do
   arch arm:   "arm64",
        intel: "x86_64"
 
-  version "2.25.0-rc.2"
-  sha256 arm:   "b6e74db794d835b7a71cd1643d9a37654bccdbd524e31b9be2b333990f8b0db2",
-         intel: "84bebc350acef9277131bfe097f53ae050770ed43ea6451a9e097cc01d1e8a9d"
+  version "2.25.0"
+  sha256 arm:   "cce92c19b2e5a340fb9fc9776d3463869ce029131d231a050b2f09c0550bb526",
+         intel: "e9d69a192e894dbc8da744a3fa157c36e8957eeb546da620261f2676b82241bb"
 
   url "https://github.com/educelab/volume-cartographer/releases/download/v#{version}/VC-#{version}-Darwin-#{arch}.zip"
   name "Volume Cartographer"
