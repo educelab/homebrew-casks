@@ -30,7 +30,6 @@ cask "volume-cartographer" do
   binary "bin/vc_transform_uv"
   binary "bin/vc_volpkg_upgrade"
   binary "bin/vc_color_map"
-  binary "bin/vc_layers"
   binary "bin/vc_mesher"
   binary "bin/vc_render"
   binary "bin/vc_segment"
