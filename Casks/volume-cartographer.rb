@@ -36,6 +36,7 @@ cask "volume-cartographer" do
   binary "bin/vc_visualize_graph"
   binary "bin/vc_visualize_ppm"
   binary "bin/vc_repair_pointsets"
+  binary "bin/vc_ppm_tool"
 
   zap trash: [
     "~/Library/Preferences/com.educelab.VC.plist",
