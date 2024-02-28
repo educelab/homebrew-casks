@@ -39,7 +39,5 @@ cask "volume-cartographer" do
   binary "bin/vc_ppm_tool"
   binary "bin/vc_version"
 
-  zap trash: [
-    "~/Library/Preferences/com.educelab.VC.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.educelab.VC.plist"
 end
