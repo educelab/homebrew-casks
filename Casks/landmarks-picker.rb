@@ -1,6 +1,6 @@
 cask "landmarks-picker" do
-  version "1.2.1"
-  sha256 "d6e8b49a05edbea90a9bec89f5402fcf10153ca91b15fcc4c1b1990b42632358"
+  version "1.2.2"
+  sha256 "5d0c63e657ea503761fbc98ddaddaf7cca96fe839c156dbc0cf20af950082069"
 
   url "https://gitlab.com/api/v4/projects/36921165/packages/generic/release/v#{version}/LandmarksPicker-#{version}-Darwin-arm64.zip"
   name "Landmarks Picker"
