@@ -1,13 +1,23 @@
 cask "volume-cartographer" do
-  version "2.27.0"
-  sha256 "6d4dea1aa21e145f2e1fc36f59d279151e028238d00449c63603197651b6c8db"
+  arch arm:   "arm64",
+       intel: "x86_64"
 
-  url "https://github.com/educelab/volume-cartographer/releases/download/v#{version}/VC-#{version}-Darwin.zip"
+  version "2.27.0"
+  sha256 arm:   "6d4dea1aa21e145f2e1fc36f59d279151e028238d00449c63603197651b6c8db",
+         intel: "b8f9e270a306cbcf6327468356be913ff50d3ac70e31ac5b0157a0f750bb7419"
+
+  on_arm do
+    depends_on macos: ">= :sonoma"
+  end
+  on_intel do
+    depends_on macos: ">= :monterey"
+  end
+
+  url_name = on_arch_conditional arm: "VC-#{version}-Darwin.zip", intel: "VC-#{version}-Darwin-macOS12.zip"
+  url "https://github.com/educelab/volume-cartographer/releases/download/v#{version}/#{url_name}"
   name "Volume Cartographer"
   desc "Virtual unwrapping toolkit"
   homepage "https://github.com/educelab/volume-cartographer"
-
-  depends_on macos: ">= :sonoma"
 
   app "VC.app"
   binary "CannySegment.app/Contents/MacOS/CannySegment", target: "vc_canny_segment"
