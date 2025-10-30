@@ -1,7 +1,5 @@
 cask "volume-cartographer" do
   version "2.28.0-rc.1"
-  
-  depends_on macos: ">= :sonoma"
 
   on_sonoma :or_newer do
     sha256 "2712a01e2601a5740809baf2d658c9d2a6101d9c08874dd318fb490e8f9de346"
@@ -12,6 +10,8 @@ cask "volume-cartographer" do
   name "Volume Cartographer"
   desc "Virtual unwrapping toolkit"
   homepage "https://github.com/educelab/volume-cartographer"
+
+  depends_on macos: ">= :sonoma"
 
   app "VC.app"
   binary "CannySegment.app/Contents/MacOS/CannySegment", target: "vc_canny_segment"
