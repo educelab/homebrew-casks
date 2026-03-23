@@ -1,8 +1,8 @@
 cask "volume-cartographer" do
-  version "2.28.0-rc.1"
+  version "2.28.0"
 
   on_sonoma :or_newer do
-    sha256 "2712a01e2601a5740809baf2d658c9d2a6101d9c08874dd318fb490e8f9de346"
+    sha256 "5116628e0cc5486d3e3591fb76085cb8117484f4291eadb2c94c2540d77d76fe"
 
     url "https://github.com/educelab/volume-cartographer/releases/download/v#{version}/VC-#{version}-Darwin.zip"
   end
