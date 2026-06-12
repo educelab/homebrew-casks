@@ -11,7 +11,7 @@ cask "volume-cartographer" do
   desc "Virtual unwrapping toolkit"
   homepage "https://github.com/educelab/volume-cartographer"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "VC.app"
   binary "CannySegment.app/Contents/MacOS/CannySegment", target: "vc_canny_segment"
