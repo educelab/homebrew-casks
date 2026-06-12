@@ -7,7 +7,7 @@ cask "landmarks-picker" do
   desc "EduceLab Landmarks Picker"
   homepage "https://gitlab.com/educelab/landmark-picker"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
   depends_on arch: [:arm64]
 
   app "Landmarks Picker.app"
