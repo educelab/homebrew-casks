@@ -1,0 +1,34 @@
+name: Bump casks
+
+on:
+  schedule:
+    # Daily at 08:00 UTC. brew bump is a no-op when nothing is outdated.
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+    inputs:
+      casks:
+        description: "Casks to check/bump (space-separated, blank = all)"
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  bump:
+    if: github.repository_owner == 'educelab'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git user
+        uses: Homebrew/actions/git-user-config@main
+
+      - name: Bump packages
+        uses: Homebrew/actions/bump-packages@main
+        with:
+          token: ${{ secrets.BUMP_PR_PAT }}
+          fork: false
+          casks: ${{ inputs.casks || 'landmarks-picker volume-cartographer' }}
